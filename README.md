@@ -51,10 +51,10 @@ To enable snapshot downloads, add the following too:
     <snapshots>
       <enabled>true</enabled>
     </snapshots>
-   <url>git:snapshots://git@github.com:andrewclegg/maven-decentral.git</url>
-    <!-- ... -->
-  </repositories>
-</repository>
+    <url>git:snapshots://git@github.com:andrewclegg/maven-decentral.git</url>
+  </repository>
+  <!-- ... -->
+</repositories>
 ```
 
 ## TODO
