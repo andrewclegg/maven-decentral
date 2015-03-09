@@ -31,7 +31,7 @@ Then add the following to your project's pom.xml, in the &lt;repositories&gt; se
     <snapshots>
       <enabled>false</enabled>
     </snapshots>
-    <url>git:releases://git@github.com:andrewclegg/maven-decentral.git</url>
+    <url>https://raw.githubusercontent.com/andrewclegg/maven-decentral/releases</url>
   </repository>
   <!-- ... -->
 </repositories>
@@ -51,10 +51,29 @@ To enable snapshot downloads, add the following too:
     <snapshots>
       <enabled>true</enabled>
     </snapshots>
-    <url>git:snapshots://git@github.com:andrewclegg/maven-decentral.git</url>
+    <url>https://raw.githubusercontent.com/andrewclegg/maven-decentral/snapshots</url>
   </repository>
   <!-- ... -->
 </repositories>
+```
+
+## Note to self
+
+To deploy to it, include this:
+
+```xml
+<distributionManagement>
+  <repository>
+    <id>maven-decentral-releases</id>
+    <name>Maven Decentral - Andrew Clegg's Maven Releases</name>
+    <url>git:releases://git@github.com:andrewclegg/maven-decentral.git</url>
+  </repository>
+  <snapshotRepository>
+    <id>maven-decentral-snapshots</id>
+    <name>Maven Decentral - Andrew Clegg's Maven Snapshots</name>
+    <url>git:snapshots://git@github.com:andrewclegg/maven-decentral.git</url>
+  </snapshotRepository>
+</distributionManagement>
 ```
 
 ## TODO
